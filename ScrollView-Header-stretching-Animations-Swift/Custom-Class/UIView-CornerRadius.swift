@@ -2,8 +2,8 @@
 //  UIView-CornerRadius.swift
 //  AirPlayDemoiPhone
 //
-//  Created by Romin Dhameliya on 19/07/19.
-//  Copyright © 2019 Romin Dhameliya. All rights reserved.
+//  Created by Artoon Solutions Private Limited on 19/07/19.
+//  Copyright © 2019 Artoon Solutions Private Limited. All rights reserved.
 //
 
 import UIKit
