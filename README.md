@@ -1,7 +1,7 @@
 
 #  ScrollView Stretch Header/ Parallax animation in Swift 5
 
-Example of how to create a UIScrollView HeaderView which sticks to the top and stretches when you pull down. Kind of like the app Twitter does.
+Example of how to create a UIScrollView HeaderView which sticks to the top and stretches when you pull down.
 
 ![](ScrollView-Header.gif)
 
