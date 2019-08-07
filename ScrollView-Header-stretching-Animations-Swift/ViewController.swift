@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  ScrollView-Header-stretching-Animations-Swift
 //
-//  Created by Sanket Vaghela on 07/08/19.
-//  Copyright © 2019 Sanket Vaghela. All rights reserved.
+//  Created by Artoon Solutions Private Limited on 07/08/19.
+//  Copyright © 2019 Artoon Solutions Private Limited. All rights reserved.
 //
 
 import UIKit
