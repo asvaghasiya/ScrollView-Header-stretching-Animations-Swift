@@ -1,10 +1,9 @@
-# ScrollView-Header-stretching-Animations-Swift
 
 #  ScrollView Stretch Header/ Parallax animation in Swift 5
 
 Example of how to create a UIScrollView HeaderView which sticks to the top and stretches when you pull down. Kind of like the app Twitter does.
 
-//add video
+![](ScrollView-Header.gif)
 
 For understanding what I am doing here, you should be familiar with UIScrollView and its delegate methods. You also need to know about UIScrollView contentInset property.
 
@@ -27,26 +26,26 @@ And then tell the header view to react accordingly depending on the scrollviews 
 ```swift
 func scrollViewDidScroll(_ scrollView: UIScrollView)
 {
-let minHeight:CGFloat = 50
-let maxHeight:CGFloat = 250+minHeight
-let yPos = scrView.contentOffset.y
-let newHeaderViewHeight = (maxHeight - yPos)-(maxHeight-minHeight)
-let tempNewHeaderViewHeight = (maxHeight - yPos)-(maxHeight-minHeight)
-let titleValue = newHeaderViewHeight-minHeight
+  let minHeight:CGFloat = 50
+  let maxHeight:CGFloat = 250+minHeight
+  let yPos = scrView.contentOffset.y
+  let newHeaderViewHeight = (maxHeight - yPos)-(maxHeight-minHeight)
+  let tempNewHeaderViewHeight = (maxHeight - yPos)-(maxHeight-minHeight)
+  let titleValue = newHeaderViewHeight-minHeight
 
-//set screen title alpha value
-if(titleValue > 0){
-let finalValue = titleValue*100/scrollTopEdgeInsets
-let alphaValue = finalValue/100
-screenTitleLbl.alpha = 1-alphaValue
-}
+  //set screen title alpha value
+  if(titleValue > 0){
+    let finalValue = titleValue*100/scrollTopEdgeInsets
+    let alphaValue = finalValue/100
+    screenTitleLbl.alpha = 1-alphaValue
+  }
 
-//manage header height constraint
-if (newHeaderViewHeight > maxHeight) {
-headerviewHeightConstraint.constant = (max(tempNewHeaderViewHeight, maxHeight)+(minHeight/2))+statusHeight
-} else {
-headerviewHeightConstraint.constant = (max(newHeaderViewHeight, minHeight)+(minHeight/2))+statusHeight
-}
+  //manage header height constraint
+  if (newHeaderViewHeight > maxHeight) {
+    headerviewHeightConstraint.constant = (max(tempNewHeaderViewHeight, maxHeight)+(minHeight/2))+statusHeight
+  } else {
+    headerviewHeightConstraint.constant = (max(newHeaderViewHeight, minHeight)+(minHeight/2))+statusHeight
+  }
 }
 ```
 This is really simple. Check out the code for more.
